@@ -8,3 +8,9 @@
 Egy érmét el lehet tolni függőleges vagy vízszintes irányba 1, 2 vagy 3 mezővel, ha négyszomszédos legalább egy másik érmével,
 és ha így üres mezőre kerül, valamint mozgás közben nincs az útban másik érme. A négy érmét a négy sarokba kell eljuttatni.**
 ------
+<p align="center">
+  <img src="https://github.com/BoteeeB/Mestint_2024_IDWPKQ/blob/main/image/2.21.%20Feladat.png" alt="Pénzérmés feladat" />
+</p>
+
+<h3 align="center">Pénzérmés feladat</h3>
+
