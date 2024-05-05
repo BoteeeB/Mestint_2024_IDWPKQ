@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|e:\\cuccok\\mestint\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 249,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Penzerme.cs [Design]",
+              "DocumentMoniker": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
+              "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Penzerme.cs",
+              "ToolTip": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs [Design]",
+              "RelativeToolTip": "WinForm_APP_IDWPKQ\\Penzerme.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T10:00:13.412Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
