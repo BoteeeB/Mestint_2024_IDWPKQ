@@ -1,0 +1,10 @@
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\bin\Debug\WinForm_APP_IDWPKQ.exe.config
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\bin\Debug\WinForm_APP_IDWPKQ.exe
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\bin\Debug\WinForm_APP_IDWPKQ.pdb
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\obj\Debug\WinForm_APP_IDWPKQ.csproj.AssemblyReference.cache
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\obj\Debug\WinForm_APP_IDWPKQ.Penzerme.resources
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\obj\Debug\WinForm_APP_IDWPKQ.Properties.Resources.resources
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\obj\Debug\WinForm_APP_IDWPKQ.csproj.GenerateResource.cache
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\obj\Debug\WinForm_APP_IDWPKQ.csproj.CoreCompileInputs.cache
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\obj\Debug\WinForm_APP_IDWPKQ.exe
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\obj\Debug\WinForm_APP_IDWPKQ.pdb
