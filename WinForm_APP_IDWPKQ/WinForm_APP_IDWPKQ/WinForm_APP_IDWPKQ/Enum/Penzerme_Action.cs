@@ -8,5 +8,9 @@ namespace WinForm_APP_IDWPKQ
 {
     internal enum Penzerme_Action
     {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
     }
 }

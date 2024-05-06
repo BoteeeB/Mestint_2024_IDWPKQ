@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WinForm_APP_IDWPKQ
 {
-    internal interface IDeepCloneable
+    public interface IDeepCloneable<T>
     {
+        T DeepClone();
     }
 }
