@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WinForm_APP_IDWPKQ;
 
 namespace WinForm_APP_IDWPKQ
 {
-    internal class Penzerme_State : State, IOperatorHandler<bool, Penzerme_Action>
+    public class Penzerme_State : State, IOperatorHandler<bool, Penzerme_Action>
     {
-        private int[,] board;
+        public int[,] board;
         private int[] centralCoins;
+
+
 
         public Penzerme_State()
         {
-            board = new int[4,4];
+            board = new int[4, 4];
             centralCoins = new int[4];
 
             for (int i = 0; i < 4; i++)
@@ -23,11 +26,16 @@ namespace WinForm_APP_IDWPKQ
                     board[i, j] = 0;
                 }
             }
-            for (int i = 0; i < 4; i++)
-            {
-                board[i, 1] = 1;
-                centralCoins[i] = 1;
-            }
+            board[1, 1] = 1;
+            board[1, 2] = 1;
+            board[2, 1] = 1;
+            board[2, 2] = 1;
+
+            // Középső érméket beállítjuk
+            centralCoins[1] = 1;
+            centralCoins[2] = 1;
+            centralCoins[3] = 1;
+            centralCoins[0] = 1;
         }
 
         public override bool IsState
@@ -52,75 +60,87 @@ namespace WinForm_APP_IDWPKQ
         {
             get
             {
-                for (int i = 0; i < 4; i++)
-                {
-                    if (board[i, 0] != 1 && board[0, i] != 1 && board[i, 3] != 1 && board[3, i] != 1)
-                        return false;
-                }
-                return true;
+                return board[0, 0] == 1 && board[0, 3] == 1 && board[3, 0] == 1 && board[3, 3] == 1;
             }
         }
 
         public bool ApplyOperator(bool isCoinInCentralPosition, Penzerme_Action action)
         {
-            // Akció alkalmazása a játékállapotra
             if (!IsOperator(isCoinInCentralPosition, action))
                 return false;
 
-            int coinRow = -1;
-            int coinCol = -1;
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)
                 {
                     if (board[i, j] == 1)
                     {
-                        coinRow = i;
-                        coinCol = j;
-                        break;
+                        for (int step = 1; step <= 3; step++)
+                        {
+                            switch (action)
+                            {
+                                case Penzerme_Action.LEFT:
+                                    if (j >= step && board[i, j - step] == 0 && IsNeighbor(i, j))
+                                    {
+                                        board[i, j] = 0;
+                                        board[i, j - step] = 1;
+                                        return true;
+                                    }
+                                    break;
+                                case Penzerme_Action.RIGHT:
+                                    if (j + step < 4 && board[i, j + step] == 0 && IsNeighbor(i, j))
+                                    {
+                                        board[i, j] = 0;
+                                        board[i, j + step] = 1;
+                                        return true;
+                                    }
+                                    break;
+                                case Penzerme_Action.UP:
+                                    if (i >= step && board[i - step, j] == 0 && IsNeighbor(i, j))
+                                    {
+                                        board[i, j] = 0;
+                                        board[i - step, j] = 1;
+                                        return true;
+                                    }
+                                    break;
+                                case Penzerme_Action.DOWN:
+                                    if (i + step < 4 && board[i + step, j] == 0 && IsNeighbor(i, j))
+                                    {
+                                        board[i, j] = 0;
+                                        board[i + step, j] = 1;
+                                        return true;
+                                    }
+                                    break;
+                            }
+                        }
                     }
                 }
-                if (coinRow != -1)
-                    break;
-            }
-
-            switch (action)
-            {
-                case Penzerme_Action.LEFT:
-                    if (coinCol > 0 && board[coinRow, coinCol - 1] == 0)
-                    {
-                        board[coinRow, coinCol] = 0;
-                        board[coinRow, coinCol - 1] = 1;
-                        return true;
-                    }
-                    break;
-                case Penzerme_Action.RIGHT:
-                    if (coinCol < 3 && board[coinRow, coinCol + 1] == 0)
-                    {
-                        board[coinRow, coinCol] = 0;
-                        board[coinRow, coinCol + 1] = 1;
-                        return true;
-                    }
-                    break;
-                case Penzerme_Action.UP:
-                    if (coinRow > 0 && board[coinRow - 1, coinCol] == 0)
-                    {
-                        board[coinRow, coinCol] = 0;
-                        board[coinRow - 1, coinCol] = 1;
-                        return true;
-                    }
-                    break;
-                case Penzerme_Action.DOWN:
-                    if (coinRow < 3 && board[coinRow + 1, coinCol] == 0)
-                    {
-                        board[coinRow, coinCol] = 0;
-                        board[coinRow + 1, coinCol] = 1;
-                        return true;
-                    }
-                    break;
             }
             return false;
         }
+
+
+
+
+        public bool IsNeighbor(int row, int col)
+        {
+            int[] dx = { -1, 0, 1, 0 }; // Exclude diagonals
+            int[] dy = { 0, 1, 0, -1 }; // Exclude diagonals
+
+            for (int i = 0; i < 4; i++) // Iterate through all 4 directions
+            {
+                int newRow = row + dx[i];
+                int newCol = col + dy[i];
+                if (newRow >= 0 && newRow < 4 && newCol >= 0 && newCol < 4 &&
+                    ((newRow != 1 || newCol != 1) && board[newRow, newCol] == 1)) // Exclude center tile and check for coin
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
 
         public override State DeepClone()
         {
@@ -147,6 +167,11 @@ namespace WinForm_APP_IDWPKQ
             return true;
         }
 
+        public override int GetHashCode()
+        {
+            return this.board.GetHashCode() + this.centralCoins.GetHashCode();
+        }
+
         public bool IsOperator(bool isCoinInCentralPosition, Penzerme_Action action)
         {
             // Akció lehetséges voltának ellenőrzése
@@ -166,5 +191,7 @@ namespace WinForm_APP_IDWPKQ
             }
             return false;
         }
+
+
     }
 }

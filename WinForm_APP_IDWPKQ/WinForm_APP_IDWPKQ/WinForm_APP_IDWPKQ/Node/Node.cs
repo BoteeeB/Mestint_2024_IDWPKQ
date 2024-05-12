@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WinForm_APP_IDWPKQ;
 
 namespace WinForm_APP_IDWPKQ
 {
@@ -14,23 +15,22 @@ namespace WinForm_APP_IDWPKQ
 
         public Node()
         {
-            this.State = new Penzerme_State();
-            this.Depth = 0;
-            this.Parent = null;
+            this.state = new Penzerme_State();
+            this.depth = 0;
+            this.parent = null;
         }
 
         public Node(Node parent)
         {
-            this.State = (Penzerme_State)parent.State.DeepClone();
-            this.Depth = parent.Depth + 1;
-            this.Parent = parent;
+            this.state = (Penzerme_State)parent.state.DeepClone();
+            this.depth = parent.depth + 1;
+            this.parent = parent;
         }
 
-        public bool IsTerminal { get { return this.State.IsGoalState; } }
-
-        public int Depth { get => depth; set => depth = value; }
-        public Node Parent { get => parent; set => parent = value; }
-        internal Penzerme_State State { get => state; set => state = value; }
+        public int Depth { get { return this.depth; } }
+        public Node Parent { get { return this.parent; } }
+        public Penzerme_State State { get { return this.state; } }
+        public bool IsTerminal { get { return this.state.IsGoalState; } }
 
         public override bool Equals(object obj)
         {
