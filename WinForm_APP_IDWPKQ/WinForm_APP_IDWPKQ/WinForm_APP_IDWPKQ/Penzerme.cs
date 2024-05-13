@@ -25,8 +25,20 @@ namespace WinForm_APP_IDWPKQ
 
         private void DefaultSolve_Click(object sender, EventArgs e)
         {
-            // ez a backtrack
+            Backtrack solver = new Backtrack(10, true);
+            Node resultNode = solver.Search();
+
+            if (resultNode != null)
+            {
+                // Megjelenítheted az eredményt vagy további műveleteket végezhetsz vele
+                MessageBox.Show("Megoldás megtalálva!");
+            }
+            else
+            {
+                MessageBox.Show("Nincs megoldás!");
+            }
         }
+
 
         private void DepthFirstSolve_Click(object sender, EventArgs e)
         {
@@ -101,7 +113,7 @@ namespace WinForm_APP_IDWPKQ
                 }
 
                 // Várunk egy kicsit, hogy látható legyen a lépés
-                System.Threading.Thread.Sleep(100);
+                //System.Threading.Thread.Sleep(100);
             }
 
             // Ha elértük a célállapotot, újra rajzoljuk ki a játéktáblát

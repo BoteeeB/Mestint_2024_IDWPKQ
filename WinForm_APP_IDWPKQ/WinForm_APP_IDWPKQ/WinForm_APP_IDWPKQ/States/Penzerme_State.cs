@@ -75,6 +75,7 @@ namespace WinForm_APP_IDWPKQ
                 {
                     if (board[i, j] == 1)
                     {
+                        bool moved = false;
                         for (int step = 1; step <= 3; step++)
                         {
                             switch (action)
@@ -84,7 +85,7 @@ namespace WinForm_APP_IDWPKQ
                                     {
                                         board[i, j] = 0;
                                         board[i, j - step] = 1;
-                                        return true;
+                                        moved = true;
                                     }
                                     break;
                                 case Penzerme_Action.RIGHT:
@@ -92,7 +93,7 @@ namespace WinForm_APP_IDWPKQ
                                     {
                                         board[i, j] = 0;
                                         board[i, j + step] = 1;
-                                        return true;
+                                        moved = true;
                                     }
                                     break;
                                 case Penzerme_Action.UP:
@@ -100,7 +101,7 @@ namespace WinForm_APP_IDWPKQ
                                     {
                                         board[i, j] = 0;
                                         board[i - step, j] = 1;
-                                        return true;
+                                        moved = true;
                                     }
                                     break;
                                 case Penzerme_Action.DOWN:
@@ -108,16 +109,18 @@ namespace WinForm_APP_IDWPKQ
                                     {
                                         board[i, j] = 0;
                                         board[i + step, j] = 1;
-                                        return true;
+                                        moved = true;
                                     }
                                     break;
                             }
+                            if (moved) return true;
                         }
                     }
                 }
             }
             return false;
         }
+
 
 
 
@@ -189,8 +192,24 @@ namespace WinForm_APP_IDWPKQ
                         return centralCoins[0] == 1;
                 }
             }
+            else
+            {
+                // Ha az érme nem a középső pozícióban van, akkor is lehetséges a művelet,
+                // feltéve, hogy az érme négyszomszédos legalább egy másik érmével.
+                for (int i = 0; i < 4; i++)
+                {
+                    for (int j = 0; j < 4; j++)
+                    {
+                        if (board[i, j] == 1 && IsNeighbor(i, j))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
             return false;
         }
+
 
 
     }
