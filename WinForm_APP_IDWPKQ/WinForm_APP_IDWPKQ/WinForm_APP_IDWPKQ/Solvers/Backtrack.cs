@@ -24,38 +24,40 @@ namespace WinForm_APP_IDWPKQ
 
         public override Node Search()
         {
-            return Search(StartNode);
-        }
+            Stack<Node> stack = new Stack<Node>();
+            stack.Push(StartNode);
 
-        public Node Search(Node actual)
-        {
-            int depth = actual.Depth;
-            if (limit > 0 && depth >= limit) return null;
-
-            Node parent = null;
-            if (isMemorisable)
-                parent = actual.Parent;
-            while (parent != null)
+            while (stack.Count > 0)
             {
-                if (actual.Equals(parent))
-                    return null;
-                parent = parent.Parent;
-            }
+                Node actual = stack.Pop();
+                int depth = actual.Depth;
 
-            if (actual.IsTerminal)
-                return actual;
+                if (limit > 0 && depth >= limit)
+                    continue;
 
-            bool[] bools = rnd.NextDouble() < 0.5 ? new bool[] { false, true } : new bool[] { true, false };
-            foreach (bool isCoinCentral in bools)
-            {
-                foreach (Penzerme_Action action in Enum.GetValues(typeof(Penzerme_Action)))
+                Node parent = null;
+                if (isMemorisable)
+                    parent = actual.Parent;
+                while (parent != null)
                 {
-                    Node newNode = new Node(actual);
-                    if (newNode.State.ApplyOperator(isCoinCentral, action))
+                    if (actual.Equals(parent))
+                        break;
+                    parent = parent.Parent;
+                }
+
+                if (actual.IsTerminal)
+                    return actual;
+
+                bool[] bools = rnd.NextDouble() < 0.5 ? new bool[] { false, true } : new bool[] { true, false };
+                foreach (bool isCoinCentral in bools)
+                {
+                    foreach (Penzerme_Action action in Enum.GetValues(typeof(Penzerme_Action)))
                     {
-                        Node terminal = Search(newNode);
-                        if (terminal != null)
-                            return terminal;
+                        Node newNode = new Node(actual);
+                        if (newNode.State.ApplyOperator(isCoinCentral, action))
+                        {
+                            stack.Push(newNode);
+                        }
                     }
                 }
             }

@@ -127,7 +127,7 @@ namespace WinForm_APP_IDWPKQ
                     stepCount++;
                     stepsLabel.Text = $"Steps: {stepCount}";
                     DrawGameBoard();
-                    await Task.Delay(10);
+                    await Task.Delay(100);
                 }
                 else
                 {

@@ -77,7 +77,7 @@ namespace teszt
 
         static int SolveWithBacktrack()
         {
-            Backtrack solver = new Backtrack();
+            Backtrack solver = new Backtrack(100, true);
             Node terminalNode = solver.Search();
             Stack<Node> solution = solver.GetSolution(terminalNode);
             int steps = PrintSolution(solution);
