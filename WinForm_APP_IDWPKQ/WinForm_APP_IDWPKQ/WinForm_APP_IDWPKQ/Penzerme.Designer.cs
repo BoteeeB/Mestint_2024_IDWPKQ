@@ -33,6 +33,7 @@
             this.BreadthFirstSolve = new System.Windows.Forms.Button();
             this.TrialError = new System.Windows.Forms.Button();
             this.gamePanel = new System.Windows.Forms.Panel();
+            this.stepsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DefaultSolve
@@ -87,11 +88,21 @@
             this.gamePanel.Size = new System.Drawing.Size(470, 368);
             this.gamePanel.TabIndex = 5;
             // 
+            // stepsLabel
+            // 
+            this.stepsLabel.AutoSize = true;
+            this.stepsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.stepsLabel.Location = new System.Drawing.Point(19, 467);
+            this.stepsLabel.Name = "stepsLabel";
+            this.stepsLabel.Size = new System.Drawing.Size(0, 24);
+            this.stepsLabel.TabIndex = 6;
+            // 
             // Penzerme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 532);
+            this.Controls.Add(this.stepsLabel);
             this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.TrialError);
             this.Controls.Add(this.BreadthFirstSolve);
@@ -100,6 +111,7 @@
             this.Name = "Penzerme";
             this.Text = "Pénzérmés játék";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Button BreadthFirstSolve;
         private System.Windows.Forms.Button TrialError;
         private System.Windows.Forms.Panel gamePanel;
+        private System.Windows.Forms.Label stepsLabel;
     }
 }
 

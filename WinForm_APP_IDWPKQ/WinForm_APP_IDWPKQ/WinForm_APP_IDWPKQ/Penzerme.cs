@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,131 +11,146 @@ namespace WinForm_APP_IDWPKQ
     {
         private Penzerme_State game;
         private Random rnd;
+        private int stepCount;
+
         public Penzerme()
         {
             InitializeComponent();
-            game = new Penzerme_State(); // Létrehozzuk a játék állapotát
-            DrawGameBoard(); // Rajzoljuk ki a játéktáblát
+            game = new Penzerme_State();
+            DrawGameBoard();
             rnd = new Random();
+            stepCount = 0;
         }
 
-
-        private void DefaultSolve_Click(object sender, EventArgs e)
+        private async void DefaultSolve_Click(object sender, EventArgs e)
         {
-            Backtrack solver = new Backtrack(10, true);
-            Node resultNode = solver.Search();
-
-            if (resultNode != null)
+            while (true)
             {
-                // Megjelenítheted az eredményt vagy további műveleteket végezhetsz vele
-                MessageBox.Show("Megoldás megtalálva!");
-            }
-            else
-            {
-                MessageBox.Show("Nincs megoldás!");
-            }
-        }
+                Backtrack solver = new Backtrack(50, true);
+                Node terminalNode = solver.Search();
+                Stack<Node> solution = solver.GetSolution(terminalNode);
 
-
-        private void DepthFirstSolve_Click(object sender, EventArgs e)
-        {
-            // Létrehozunk egy DepthFirst algoritmust
-            DepthFirst solver = new DepthFirst();
-
-            // Megkeressük a megoldást
-            Node solutionNode = solver.Search();
-
-            // Ha van megoldás
-            if (solutionNode != null)
-            {
-                // Összegyűjtjük a megoldást egy sztringben
-                StringBuilder solutionString = new StringBuilder();
-                Stack<Node> solutionStack = new Stack<Node>();
-                while (solutionNode != null)
-                {
-                    solutionStack.Push(solutionNode);
-                    solutionNode = solutionNode.Parent;
-                }
-                while (solutionStack.Count != 0)
-                {
-                    solutionString.AppendLine(solutionStack.Pop().ToString());
-                }
-
-                // Kiírjuk a megoldást
-                MessageBox.Show("Megoldás találva:\n" + solutionString.ToString());
-            }
-            else
-            {
-                // Ha nincs megoldás
-                MessageBox.Show("Nincs megoldás.");
-            }
-        }
-
-
-
-        private void BreadthFirstSolve_Click(object sender, EventArgs e)
-        {
-            // ez a breadthfirst
-        }
-
-        private void TrialError_Click(object sender, EventArgs e)
-        {
-            // Próba-hiba módszer futtatása
-            while (!game.IsGoalState) // Amíg nincs célállapot
-            {
-                // Rajzoljuk ki a játéktáblát
-                DrawGameBoard();
-
-                // Véletlenszerű lépés végrehajtása
-                Penzerme_Action randomAction = (Penzerme_Action)rnd.Next(0, 4); // Use the class-level random
-                bool moved = false;
-                for (int i = 0; i < 4; i++)
-                {
-                    for (int j = 0; j < 4; j++)
-                    {
-                        if (game.board[i, j] == 1 && game.IsNeighbor(i, j))
-                        {
-                            moved = game.ApplyOperator(true, randomAction);
-                            if (moved) break;
-                        }
-                    }
-                    if (moved) break;
-                }
-
-                // Ha egyetlen érme sem mozgott, újraindítjuk a játékot
-                if (!moved)
+                if (solution == null)
                 {
                     game = new Penzerme_State();
-                    continue;
+                    DrawGameBoard();
+                    await Task.Delay(500);
                 }
-
-                // Várunk egy kicsit, hogy látható legyen a lépés
-                //System.Threading.Thread.Sleep(100);
+                else
+                {
+                    while (solution.Count > 0)
+                    {
+                        Node node = solution.Pop();
+                        game = node.State;
+                        stepCount++;
+                        stepsLabel.Text = $"Steps: {stepCount}";
+                        DrawGameBoard();
+                        await Task.Delay(500);
+                    }
+                    break;
+                }
             }
-
-            // Ha elértük a célállapotot, újra rajzoljuk ki a játéktáblát
-            DrawGameBoard();
-            MessageBox.Show("Célállapot elérve!");
         }
 
+        private async void DepthFirstSolve_Click(object sender, EventArgs e)
+        {
+            while (true)
+            {
+                DepthFirst solver = new DepthFirst();
+                Node terminalNode = solver.Search();
+                Stack<Node> solution = solver.GetSolution(terminalNode);
 
+                if (solution == null)
+                {
+                    game = new Penzerme_State();
+                    DrawGameBoard();
+                    await Task.Delay(500);
+                }
+                else
+                {
+                    while (solution.Count > 0)
+                    {
+                        Node node = solution.Pop();
+                        game = node.State;
+                        stepCount++;
+                        stepsLabel.Text = $"Steps: {stepCount}";
+                        DrawGameBoard();
+                        await Task.Delay(500);
+                    }
+                    break;
+                }
+            }
+        }
+
+        private async void BreadthFirstSolve_Click(object sender, EventArgs e)
+        {
+            while (true)
+            {
+                BreadthFirst solver = new BreadthFirst();
+                Node terminalNode = solver.Search();
+                Stack<Node> solution = solver.GetSolution(terminalNode);
+
+                if (solution == null)
+                {
+                    game = new Penzerme_State();
+                    DrawGameBoard();
+                    await Task.Delay(500);
+                }
+                else
+                {
+                    while (solution.Count > 0)
+                    {
+                        Node node = solution.Pop();
+                        game = node.State;
+                        stepCount++;
+                        stepsLabel.Text = $"Steps: {stepCount}";
+                        DrawGameBoard();
+                        await Task.Delay(500);
+                    }
+                    break;
+                }
+            }
+        }
+
+        private async void TrialError_Click(object sender, EventArgs e)
+        {
+            List<Penzerme_Action> actions = Enum.GetValues(typeof(Penzerme_Action)).Cast<Penzerme_Action>().ToList();
+            bool solved = false;
+
+            while (!solved)
+            {
+                var possibleActions = actions.Where(a => game.IsOperator(true, a)).ToList();
+                if (possibleActions.Count > 0)
+                {
+                    var action = possibleActions[rnd.Next(possibleActions.Count)];
+                    game.ApplyOperator(true, action);
+                    stepCount++;
+                    stepsLabel.Text = $"Steps: {stepCount}";
+                    DrawGameBoard();
+                    await Task.Delay(10);
+                }
+                else
+                {
+                    game = new Penzerme_State();
+                    DrawGameBoard();
+                }
+                solved = game.IsGoalState;
+            }
+        }
 
         private void DrawGameBoard()
         {
-            // Töröljük a korábbi rajzot, ha volt
             gamePanel.Controls.Clear();
 
-            // Méretezzük a panelt, hogy a cellák egyenletesen elférjenek benne
-            gamePanel.Width = 4 * 100; // 50 a cella mérete
+            gamePanel.Width = 4 * 100;
             gamePanel.Height = 4 * 100;
 
-            // Rajzoljuk ki a játéktáblát és az érméket
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)
                 {
                     Panel cell = new Panel();
-                    cell.BackColor = game.board[i, j] == 1 ? Color.Gold : Color.White;
+                    cell.BackColor = game.Baseboard[i, j] == 'C' ? Color.Gold : Color.White;
                     cell.BorderStyle = BorderStyle.FixedSingle;
                     cell.Width = 100;
                     cell.Height = 100;
@@ -148,5 +160,4 @@ namespace WinForm_APP_IDWPKQ
             }
         }
     }
-
 }
