@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6B072920-EE0A-4C56-B5AD-5F15D2A8DA7D}|teszt\\teszt.csproj|C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\teszt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B072920-EE0A-4C56-B5AD-5F15D2A8DA7D}|teszt\\teszt.csproj|solutionrelative:teszt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|c:\\users\\e1243890\\documents\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\solvers\\backtrack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\solvers\\backtrack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\winform_app_idwpkq\\states\\penzerme_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\states\\penzerme_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|c:\\users\\e1243890\\documents\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\solvers\\breadthfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\solvers\\breadthfirst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|c:\\users\\e1243890\\documents\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|c:\\users\\e1243890\\documents\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\enum\\penzerme_action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\winform_app_idwpkq\\enum\\penzerme_action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\enum\\penzerme_action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B072920-EE0A-4C56-B5AD-5F15D2A8DA7D}|teszt\\teszt.csproj|c:\\users\\e1243890\\documents\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\teszt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B072920-EE0A-4C56-B5AD-5F15D2A8DA7D}|teszt\\teszt.csproj|solutionrelative:teszt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|c:\\users\\e1243890\\documents\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\states\\penzerme_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\states\\penzerme_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|c:\\users\\e1243890\\documents\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +42,39 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Backtrack.cs",
+              "DocumentMoniker": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Solvers\\Backtrack.cs",
+              "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Solvers\\Backtrack.cs",
+              "ToolTip": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Solvers\\Backtrack.cs",
+              "RelativeToolTip": "WinForm_APP_IDWPKQ\\Solvers\\Backtrack.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwDIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T10:20:16.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BreadthFirst.cs",
+              "DocumentMoniker": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Solvers\\BreadthFirst.cs",
+              "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Solvers\\BreadthFirst.cs",
+              "ToolTip": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Solvers\\BreadthFirst.cs",
+              "RelativeToolTip": "WinForm_APP_IDWPKQ\\Solvers\\BreadthFirst.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAjwBYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T10:13:15.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\teszt\\Program.cs",
               "RelativeDocumentMoniker": "teszt\\Program.cs",
               "ToolTip": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\teszt\\Program.cs",
               "RelativeToolTip": "teszt\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowEkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T10:06:32.332Z",
               "EditorCaption": ""
@@ -53,14 +87,14 @@
               "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Penzerme.cs",
               "ToolTip": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
               "RelativeToolTip": "WinForm_APP_IDWPKQ\\Penzerme.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAcwFkAAAAyAAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAYwKMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T10:03:55.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Penzerme.cs [Design]",
               "DocumentMoniker": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
               "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Penzerme.cs",
@@ -72,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Penzerme_Action.cs",
               "DocumentMoniker": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Enum\\Penzerme_Action.cs",
               "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Enum\\Penzerme_Action.cs",
@@ -80,18 +114,17 @@
               "RelativeToolTip": "WinForm_APP_IDWPKQ\\Enum\\Penzerme_Action.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T10:03:30.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-17T10:03:30.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Penzerme_State.cs",
               "DocumentMoniker": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
               "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
               "ToolTip": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
               "RelativeToolTip": "WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAcwMYAAAAAAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T10:02:57.24Z",
               "EditorCaption": ""

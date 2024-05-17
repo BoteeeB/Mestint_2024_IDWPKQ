@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinForm_APP_IDWPKQ
 {
-    internal class BreadthFirst : SolverBase
+    public  class BreadthFirst : SolverBase
     {
         Queue<Node> openNodes;
         List<Node> closedNodes;

@@ -13,14 +13,14 @@ namespace WinForm_APP_IDWPKQ
               { 'E', 'E', 'E', 'E' },
               { 'E', 'C', 'C', 'E' },
               { 'E', 'C', 'C', 'E' },
-              { 'E', 'E', 'E', 'E' },
+              { 'E', 'E', 'E', 'E' }
             };
 
         public char[,] goalboard = {
               { 'C', 'E', 'E', 'C' },
               { 'E', 'E', 'E', 'E' },
               { 'E', 'E', 'E', 'E' },
-              { 'C', 'E', 'E', 'C' },
+              { 'C', 'E', 'E', 'C' }
             };
 
         public char[,] Baseboard { get { return (char[,])baseboard.Clone(); } }
