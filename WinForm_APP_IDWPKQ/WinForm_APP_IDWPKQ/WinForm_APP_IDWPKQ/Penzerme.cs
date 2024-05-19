@@ -26,8 +26,8 @@ namespace WinForm_APP_IDWPKQ
         {
             while (true)
             {
-                Backtrack solver = new Backtrack(50, true);
-                Node terminalNode = solver.Search();
+                Backtrack solver = new Backtrack(100, true);
+                Node terminalNode = await Task.Run(() => solver.Search());
                 Stack<Node> solution = solver.GetSolution(terminalNode);
 
                 if (solution == null)
@@ -57,7 +57,7 @@ namespace WinForm_APP_IDWPKQ
             while (true)
             {
                 DepthFirst solver = new DepthFirst();
-                Node terminalNode = solver.Search();
+                Node terminalNode = await Task.Run(() => solver.Search());
                 Stack<Node> solution = solver.GetSolution(terminalNode);
 
                 if (solution == null)
@@ -87,7 +87,7 @@ namespace WinForm_APP_IDWPKQ
             while (true)
             {
                 BreadthFirst solver = new BreadthFirst();
-                Node terminalNode = solver.Search();
+                Node terminalNode = await Task.Run(() => solver.Search());
                 Stack<Node> solution = solver.GetSolution(terminalNode);
 
                 if (solution == null)

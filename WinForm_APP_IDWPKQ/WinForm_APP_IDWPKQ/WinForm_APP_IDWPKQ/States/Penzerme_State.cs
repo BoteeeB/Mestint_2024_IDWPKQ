@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,7 +56,13 @@ namespace WinForm_APP_IDWPKQ
 
         public bool ApplyOperator(bool t1, Penzerme_Action action)
         {
-            if (!IsOperator(t1, action)) return false;
+            Debug.WriteLine($"Applying operator: {action}");
+
+            if (!IsOperator(t1, action)) 
+            {
+                Debug.WriteLine("Operator not applicable.");
+                return false; 
+            }
 
             int dx = 0, dy = 0;
             switch (action)
@@ -83,6 +90,7 @@ namespace WinForm_APP_IDWPKQ
                         int ni = i + dy, nj = j + dx;
                         if (IsInBounds(ni, nj) && baseboard[ni, nj] == 'E' && HasNeighbor(i, j))
                         {
+                            Debug.WriteLine($"Moving coin from ({i},{j}) to ({ni},{nj})");
                             baseboard[ni, nj] = 'C';
                             baseboard[i, j] = 'E';
                             return true;

@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\",
+  "WorkspaceRootPath": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|e:\\cuccok\\mestint\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|e:\\cuccok\\mestint\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\states\\penzerme_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\states\\penzerme_state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|e:\\cuccok\\mestint\\mestint_2024_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F3B59FEC-858B-407D-B82E-885DD6FC9A14}|WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ.csproj|solutionrelative:winform_app_idwpkq\\penzerme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +22,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 249,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Penzerme.cs [Design]",
+              "DocumentMoniker": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
+              "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Penzerme.cs",
+              "ToolTip": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs [Design]",
+              "RelativeToolTip": "WinForm_APP_IDWPKQ\\Penzerme.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:13:29.639Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Penzerme_State.cs",
+              "DocumentMoniker": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
+              "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
+              "ToolTip": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
+              "RelativeToolTip": "WinForm_APP_IDWPKQ\\States\\Penzerme_State.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAmwFwAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T09:02:14.746Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Penzerme.cs",
-              "DocumentMoniker": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
+              "DocumentMoniker": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
               "RelativeDocumentMoniker": "WinForm_APP_IDWPKQ\\Penzerme.cs",
-              "ToolTip": "C:\\Users\\E1243890\\Documents\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
+              "ToolTip": "E:\\Cuccok\\MESTINT\\Mestint_2024_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\WinForm_APP_IDWPKQ\\Penzerme.cs",
               "RelativeToolTip": "WinForm_APP_IDWPKQ\\Penzerme.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAAIwH4AAAAbAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAIwHMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T10:03:55.302Z",
               "EditorCaption": ""
