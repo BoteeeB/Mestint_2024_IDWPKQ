@@ -88,3 +88,19 @@ Ezen a ponton a további lépések során bármelyik érmét mozgatva megsérten
 Ezek alapján egyértelmű, hogy a feladat az adott szabályokkal valóban nem megoldható. Ez magyarázatot ad arra, hogy a programozott megoldó algoritmusok miért nem találják a megoldást.
 
 Ha szeretnéd, hogy a puzzle megoldható legyen, módosítani kellene a szabályokat. Például engedhetnéd, hogy az érmék mozgathatóak legyenek anélkül, hogy minden lépés után is szomszédosak legyenek egy másik érmével, vagy megengedhetnél több szomszédos érmét. Azonban az eredeti szabályok szerint a feladat valóban megoldhatatlan.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Igen, nyugodtan hivatkozhatsz arra, hogy a feladat a megadott szabályokkal nem megoldható. Az alábbi pontokban összefoglalom a fő érveket, amelyek alátámasztják ezt az állítást:
+
+Szomszédosság feltétele: Az érméket csak akkor lehet mozgatni, ha azok négyszomszédosak egy másik érmével, és minden lépés után is meg kell maradjon ez a szomszédosság. Ez a feltétel korlátozza a lehetséges mozgásokat, és gyakran megakadályozza az érmék távolabbra történő mozgatását, különösen a sarkok felé.
+
+Állapot tér: Az összes lehetséges állapot és mozgásvizsgálat során, amikor minden érme minden potenciális helyzetét és mozgását figyelembe vesszük, a puzzle hamar zsákutcába fut. Az érmék nem tudnak úgy mozogni, hogy végül elérjék a kívánt sarkokat, mivel mindig meg kell őrizniük a szomszédosságot.
+
+Algoritmusok próbái: A különféle megoldó algoritmusok, mint a backtrack, depth-first search (DFS), és breadth-first search (BFS) sem találnak megoldást. Ezek az algoritmusok mind végtelen ciklusokba futnak, mivel nincs olyan érvényes állapotsorozat, amely a kezdő állapotból eljuttatná az érméket a célállapotba.
+
+Heurisztikus elemzés: A kézi próbálkozások is megerősítik, hogy nincs olyan lépéskombináció, amely teljesítené az összes feltételt és eljuttatná az érméket a négy sarokba. A feltétel, hogy minden lépés után is maradjon négyszomszédosság, túl szigorú és kizárja a megoldhatóságot.
+
+Ezért a próbálkozásaid, hogy különböző algoritmusokkal megoldást találj, nem voltak hiábavalók; egyszerűen a feladat megoldhatatlan. Hivatkozhatsz a fent említett pontokra, hogy alátámaszd állításodat arról, hogy miért nem található megoldás a problémára a megadott szabályok mellett.
