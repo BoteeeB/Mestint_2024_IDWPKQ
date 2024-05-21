@@ -9,3 +9,14 @@ C:\Users\E1243890\Documents\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_I
 C:\Users\E1243890\Documents\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.csproj.Up2Date
 C:\Users\E1243890\Documents\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.exe
 C:\Users\E1243890\Documents\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.pdb
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.csproj.AssemblyReference.cache
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.csproj.CoreCompileInputs.cache
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.exe
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.pdb
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\bin\Debug\teszt.exe.config
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\bin\Debug\teszt.exe
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\bin\Debug\teszt.pdb
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\bin\Debug\WinForm_APP_IDWPKQ.exe
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\bin\Debug\WinForm_APP_IDWPKQ.pdb
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\bin\Debug\WinForm_APP_IDWPKQ.exe.config
+E:\Cuccok\MESTINT\Mestint_2024_IDWPKQ\WinForm_APP_IDWPKQ\WinForm_APP_IDWPKQ\teszt\obj\Debug\teszt.csproj.Up2Date

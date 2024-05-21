@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WinForm_APP_IDWPKQ;
 
 namespace WinForm_APP_IDWPKQ
 {
@@ -18,6 +16,7 @@ namespace WinForm_APP_IDWPKQ
             this.limit = limit;
             this.isMemorisable = isMemorisable;
         }
+
         public Backtrack() : this(0, false) { }
         public Backtrack(int limit) : this(limit, false) { }
         public Backtrack(bool isMemorisable) : this(0, isMemorisable) { }
@@ -64,6 +63,5 @@ namespace WinForm_APP_IDWPKQ
 
             return null;
         }
-
     }
 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WinForm_APP_IDWPKQ
 {
@@ -46,6 +43,7 @@ namespace WinForm_APP_IDWPKQ
 
             return null;
         }
+
         private Node SearchWithoutCircleCheck()
         {
             while (openNodes.Count != 0)
@@ -63,9 +61,5 @@ namespace WinForm_APP_IDWPKQ
 
             return null;
         }
-
-
     }
-
-    
 }

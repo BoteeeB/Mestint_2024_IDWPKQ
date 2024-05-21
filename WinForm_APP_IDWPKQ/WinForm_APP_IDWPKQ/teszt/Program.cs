@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using WinForm_APP_IDWPKQ;
 
 namespace teszt
@@ -9,120 +8,48 @@ namespace teszt
     {
         static void Main(string[] args)
         {
-            Penzerme_State state = new Penzerme_State();
+            Console.WriteLine("Choose the search algorithm:");
+            Console.WriteLine("1. BreadthFirst");
+            Console.WriteLine("2. DepthFirst");
+            Console.WriteLine("3. Backtrack");
 
-            Console.WriteLine("Select a solver:");
-            Console.WriteLine("1. Trial and Error");
-            Console.WriteLine("2. Backtrack");
-            Console.WriteLine("3. Depth-First");
-            Console.WriteLine("4. Breadth-First");
+            int choice = int.Parse(Console.ReadLine());
+            SolverBase solver = null;
 
-            int choice;
-            while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 4)
-            {
-                Console.WriteLine("Invalid choice. Please enter a number between 1 and 4.");
-            }
-
-            int steps = 0;
             switch (choice)
             {
                 case 1:
-                    steps = SolveWithTrialAndError(state);
+                    solver = new BreadthFirst(true);
                     break;
                 case 2:
-                    steps = SolveWithBacktrack();
+                    solver = new DepthFirst(true);
                     break;
                 case 3:
-                    steps = SolveWithDepthFirst();
-                    break;
-                case 4:
-                    steps = SolveWithBreadthFirst();
+                    solver = new Backtrack(100, true);
                     break;
                 default:
-                    break;
+                    Console.WriteLine("Invalid choice.");
+                    return;
             }
 
-            Console.WriteLine($"Solution steps: {steps}");
-            Console.ReadLine();
-        }
-
-        static int SolveWithTrialAndError(Penzerme_State state)
-        {
-            List<Penzerme_Action> actions = Enum.GetValues(typeof(Penzerme_Action)).Cast<Penzerme_Action>().ToList();
-            Random rnd = new Random();
-            int steps = 0;
-            bool solved = false;
-
-            while (!solved)
+            Node result = solver.Search();
+            if (result != null)
             {
-                var possibleActions = actions.Where(a => state.IsOperator(true, a)).ToList();
-                if (possibleActions.Count > 0)
+                Console.WriteLine("Solution found!");
+                Stack<Node> solution = solver.GetSolution(result);
+                while (solution.Count > 0)
                 {
-                    var action = possibleActions[rnd.Next(possibleActions.Count)];
-                    state.ApplyOperator(true, action);
-                    steps++;
-                    Console.WriteLine($"Steps: {steps}");
-                    PrintBoard(state.baseboard);
+                    Node node = solution.Pop();
+                    PrintBoard(node.State.Baseboard);
+                    Console.WriteLine();
                 }
-                else
-                {
-                    state = new Penzerme_State();
-                    PrintBoard(state.baseboard);
-                }
-                solved = state.IsGoalState;
             }
-
-            return steps;
-        }
-
-        static int SolveWithBacktrack()
-        {
-            Backtrack solver = new Backtrack(100, true);
-            Node terminalNode = solver.Search();
-            Stack<Node> solution = solver.GetSolution(terminalNode);
-            int steps = PrintSolution(solution);
-            return steps;
-        }
-
-        static int SolveWithDepthFirst()
-        {
-            DepthFirst solver = new DepthFirst();
-            Node terminalNode = solver.Search();
-            Stack<Node> solution = solver.GetSolution(terminalNode);
-            int steps = PrintSolution(solution);
-            return steps;
-        }
-
-        static int SolveWithBreadthFirst()
-        {
-            BreadthFirst solver = new BreadthFirst();
-            Node terminalNode = solver.Search();
-            Stack<Node> solution = solver.GetSolution(terminalNode);
-            int steps = PrintSolution(solution);
-            return steps;
-        }
-
-        static int PrintSolution(Stack<Node> solution)
-        {
-            if (solution == null)
+            else
             {
                 Console.WriteLine("No solution found.");
-                return 0;
             }
-
-            int steps = 0;
-            while (solution.Count > 0)
-            {
-                Node node = solution.Pop();
-                Penzerme_State state = node.State;
-                steps++;
-                Console.WriteLine($"Steps: {steps}");
-                PrintBoard(state.baseboard);
-            }
-
-            return steps;
+            Console.ReadLine();
         }
-
 
         static void PrintBoard(char[,] board)
         {

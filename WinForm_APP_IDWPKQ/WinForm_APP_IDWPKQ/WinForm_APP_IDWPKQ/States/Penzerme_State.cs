@@ -10,28 +10,34 @@ namespace WinForm_APP_IDWPKQ
 {
     public class Penzerme_State : State, IOperatorHandler<bool, Penzerme_Action>
     {
-        public char[,] baseboard = {
-              { 'E', 'E', 'E', 'E' },
-              { 'E', 'C', 'C', 'E' },
-              { 'E', 'C', 'C', 'E' },
-              { 'E', 'E', 'E', 'E' }
+        public Penzerme_State()
+        {
+            this.baseboard = new char[4, 4]
+            {
+                { 'C', 'C', 'E', 'E' },
+                { 'C', 'C', 'E', 'E' },
+                { 'E', 'E', 'E', 'E' },
+                { 'E', 'E', 'E', 'E' }
             };
+        }
+
+        public char[,] baseboard;
 
         public char[,] goalboard = {
               { 'C', 'E', 'E', 'C' },
               { 'E', 'E', 'E', 'E' },
               { 'E', 'E', 'E', 'E' },
               { 'C', 'E', 'E', 'C' }
-            };
+        };
 
         public char[,] Baseboard { get { return (char[,])baseboard.Clone(); } }
+
         public override bool IsState
         {
             get
             {
                 int countE = (from char c in baseboard where c == 'E' select c).Count();
                 int countC = (from char c in baseboard where c == 'C' select c).Count();
-
                 return countE == 12 && countC == 4;
             }
         }
@@ -54,54 +60,7 @@ namespace WinForm_APP_IDWPKQ
             }
         }
 
-        public bool ApplyOperator(bool t1, Penzerme_Action action)
-        {
-            Debug.WriteLine($"Applying operator: {action}");
-
-            if (!IsOperator(t1, action)) 
-            {
-                Debug.WriteLine("Operator not applicable.");
-                return false; 
-            }
-
-            int dx = 0, dy = 0;
-            switch (action)
-            {
-                case Penzerme_Action.UP1: dy = -1; break;
-                case Penzerme_Action.UP2: dy = -2; break;
-                case Penzerme_Action.UP3: dy = -3; break;
-                case Penzerme_Action.DOWN1: dy = 1; break;
-                case Penzerme_Action.DOWN2: dy = 2; break;
-                case Penzerme_Action.DOWN3: dy = 3; break;
-                case Penzerme_Action.LEFT1: dx = -1; break;
-                case Penzerme_Action.LEFT2: dx = -2; break;
-                case Penzerme_Action.LEFT3: dx = -3; break;
-                case Penzerme_Action.RIGHT1: dx = 1; break;
-                case Penzerme_Action.RIGHT2: dx = 2; break;
-                case Penzerme_Action.RIGHT3: dx = 3; break;
-            }
-
-            for (int i = 0; i < baseboard.GetLength(0); i++)
-            {
-                for (int j = 0; j < baseboard.GetLength(1); j++)
-                {
-                    if (baseboard[i, j] == 'C')
-                    {
-                        int ni = i + dy, nj = j + dx;
-                        if (IsInBounds(ni, nj) && baseboard[ni, nj] == 'E' && HasNeighbor(i, j))
-                        {
-                            Debug.WriteLine($"Moving coin from ({i},{j}) to ({ni},{nj})");
-                            baseboard[ni, nj] = 'C';
-                            baseboard[i, j] = 'E';
-                            return true;
-                        }
-                    }
-                }
-            }
-            return false;
-        }
-
-        public bool IsOperator(bool t1, Penzerme_Action action)
+        public bool IsOperator(bool isActionValid, Penzerme_Action action)
         {
             int dx = 0, dy = 0;
             switch (action)
@@ -129,6 +88,47 @@ namespace WinForm_APP_IDWPKQ
                         int ni = i + dy, nj = j + dx;
                         if (IsInBounds(ni, nj) && baseboard[ni, nj] == 'E' && HasNeighbor(i, j) && IsPathClear(i, j, ni, nj))
                         {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool ApplyOperator(bool isActionValid, Penzerme_Action action)
+        {
+            if (!IsOperator(isActionValid, action))
+                return false;
+
+            int dx = 0, dy = 0;
+            switch (action)
+            {
+                case Penzerme_Action.UP1: dy = -1; break;
+                case Penzerme_Action.UP2: dy = -2; break;
+                case Penzerme_Action.UP3: dy = -3; break;
+                case Penzerme_Action.DOWN1: dy = 1; break;
+                case Penzerme_Action.DOWN2: dy = 2; break;
+                case Penzerme_Action.DOWN3: dy = 3; break;
+                case Penzerme_Action.LEFT1: dx = -1; break;
+                case Penzerme_Action.LEFT2: dx = -2; break;
+                case Penzerme_Action.LEFT3: dx = -3; break;
+                case Penzerme_Action.RIGHT1: dx = 1; break;
+                case Penzerme_Action.RIGHT2: dx = 2; break;
+                case Penzerme_Action.RIGHT3: dx = 3; break;
+            }
+
+            for (int i = 0; i < baseboard.GetLength(0); i++)
+            {
+                for (int j = 0; j < baseboard.GetLength(1); j++)
+                {
+                    if (baseboard[i, j] == 'C')
+                    {
+                        int ni = i + dy, nj = j + dx;
+                        if (IsInBounds(ni, nj) && baseboard[ni, nj] == 'E' && HasNeighbor(i, j) && IsPathClear(i, j, ni, nj))
+                        {
+                            baseboard[ni, nj] = 'C';
+                            baseboard[i, j] = 'E';
                             return true;
                         }
                     }
@@ -201,6 +201,24 @@ namespace WinForm_APP_IDWPKQ
         public override int GetHashCode()
         {
             return this.baseboard.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < baseboard.GetLength(0); i++)
+            {
+                for (int j = 0; j < baseboard.GetLength(1); j++)
+                {
+                    sb.Append(baseboard[i, j]);
+                    if (j < baseboard.GetLength(1) - 1)
+                    {
+                        sb.Append(' ');
+                    }
+                }
+                sb.AppendLine();
+            }
+            return sb.ToString();
         }
     }
 }

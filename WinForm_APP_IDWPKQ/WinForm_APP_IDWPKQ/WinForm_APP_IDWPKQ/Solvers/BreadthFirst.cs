@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WinForm_APP_IDWPKQ
 {
-    public  class BreadthFirst : SolverBase
+    public class BreadthFirst : SolverBase
     {
         Queue<Node> openNodes;
         List<Node> closedNodes;
@@ -46,6 +43,7 @@ namespace WinForm_APP_IDWPKQ
 
             return null;
         }
+
         private Node SearchWithoutCircleCheck()
         {
             while (openNodes.Count != 0)
