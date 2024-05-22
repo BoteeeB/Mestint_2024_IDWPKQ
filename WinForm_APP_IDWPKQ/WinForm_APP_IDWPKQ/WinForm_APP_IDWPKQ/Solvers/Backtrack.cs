@@ -24,36 +24,27 @@ namespace WinForm_APP_IDWPKQ
         public override Node Search()
         {
             Stack<Node> stack = new Stack<Node>();
+            HashSet<Node> visited = new HashSet<Node>();
             stack.Push(StartNode);
 
             while (stack.Count > 0)
             {
                 Node actual = stack.Pop();
+                visited.Add(actual);
                 int depth = actual.Depth;
 
-                if (limit > 0 && depth >= limit)
+                if (depth >= limit && limit > 0)
                     continue;
-
-                Node parent = null;
-                if (isMemorisable)
-                    parent = actual.Parent;
-                while (parent != null)
-                {
-                    if (actual.Equals(parent))
-                        break;
-                    parent = parent.Parent;
-                }
 
                 if (actual.IsTerminal)
                     return actual;
 
-                bool[] bools = rnd.NextDouble() < 0.5 ? new bool[] { false, true } : new bool[] { true, false };
-                foreach (bool isCoinCentral in bools)
+                foreach (Penzerme_Action action in Enum.GetValues(typeof(Penzerme_Action)))
                 {
-                    foreach (Penzerme_Action action in Enum.GetValues(typeof(Penzerme_Action)))
+                    Node newNode = new Node(actual);
+                    if (newNode.State.ApplyOperator(true, action))
                     {
-                        Node newNode = new Node(actual);
-                        if (newNode.State.ApplyOperator(isCoinCentral, action))
+                        if (!visited.Contains(newNode))
                         {
                             stack.Push(newNode);
                         }

@@ -14,9 +14,9 @@ namespace WinForm_APP_IDWPKQ
         {
             this.baseboard = new char[4, 4]
             {
-                { 'C', 'C', 'E', 'E' },
-                { 'C', 'C', 'E', 'E' },
                 { 'E', 'E', 'E', 'E' },
+                { 'E', 'C', 'C', 'E' },
+                { 'E', 'C', 'C', 'E' },
                 { 'E', 'E', 'E', 'E' }
             };
         }

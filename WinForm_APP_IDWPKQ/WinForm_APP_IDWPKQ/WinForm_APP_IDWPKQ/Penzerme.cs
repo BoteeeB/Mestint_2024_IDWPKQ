@@ -26,7 +26,7 @@ namespace WinForm_APP_IDWPKQ
         {
             while (true)
             {
-                Backtrack solver = new Backtrack(100, true);
+                Backtrack solver = new Backtrack(20, true);
                 Node terminalNode = await Task.Run(() => solver.Search());
                 Stack<Node> solution = solver.GetSolution(terminalNode);
 
@@ -45,7 +45,7 @@ namespace WinForm_APP_IDWPKQ
                         stepCount++;
                         stepsLabel.Text = $"Steps: {stepCount}";
                         DrawGameBoard();
-                        await Task.Delay(100);
+                        await Task.Delay(250);
                     }
                     break;
                 }
@@ -75,7 +75,7 @@ namespace WinForm_APP_IDWPKQ
                         stepCount++;
                         stepsLabel.Text = $"Steps: {stepCount}";
                         DrawGameBoard();
-                        await Task.Delay(500);
+                        await Task.Delay(250);
                     }
                     break;
                 }
@@ -105,7 +105,7 @@ namespace WinForm_APP_IDWPKQ
                         stepCount++;
                         stepsLabel.Text = $"Steps: {stepCount}";
                         DrawGameBoard();
-                        await Task.Delay(500);
+                        await Task.Delay(250);
                     }
                     break;
                 }

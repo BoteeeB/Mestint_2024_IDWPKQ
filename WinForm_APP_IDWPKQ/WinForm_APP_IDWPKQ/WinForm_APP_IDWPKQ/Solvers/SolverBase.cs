@@ -5,6 +5,7 @@ namespace WinForm_APP_IDWPKQ
 {
     public abstract class SolverBase
     {
+
         private Node startNode;
         public SolverBase()
         {
