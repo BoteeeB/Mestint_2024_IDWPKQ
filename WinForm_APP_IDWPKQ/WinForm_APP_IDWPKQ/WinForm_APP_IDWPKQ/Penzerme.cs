@@ -45,7 +45,7 @@ namespace WinForm_APP_IDWPKQ
                         stepCount++;
                         stepsLabel.Text = $"Steps: {stepCount}";
                         DrawGameBoard();
-                        await Task.Delay(250);
+                        await Task.Delay(100);
                     }
                     break;
                 }
@@ -158,6 +158,14 @@ namespace WinForm_APP_IDWPKQ
                     gamePanel.Controls.Add(cell);
                 }
             }
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            game = new Penzerme_State();
+            stepCount = 0;
+            stepsLabel.Text = $"Steps: {stepCount}";
+            DrawGameBoard();
         }
     }
 }

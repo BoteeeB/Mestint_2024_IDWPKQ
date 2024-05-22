@@ -200,7 +200,15 @@ namespace WinForm_APP_IDWPKQ
 
         public override int GetHashCode()
         {
-            return this.baseboard.GetHashCode();
+            int hash = 17;
+            for (int i = 0; i < this.baseboard.GetLength(0); i++)
+            {
+                for (int j = 0; j < this.baseboard.GetLength(1); j++)
+                {
+                    hash = hash * 31 + this.baseboard[i, j].GetHashCode();
+                }
+            }
+            return hash;
         }
 
         public override string ToString()

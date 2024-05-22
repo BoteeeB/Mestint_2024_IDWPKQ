@@ -53,7 +53,7 @@ namespace WinForm_APP_IDWPKQ
             foreach (Penzerme_Action action in Enum.GetValues(typeof(Penzerme_Action)))
             {
                 Node newNode = new Node(this);
-                if (newNode.state.ApplyOperator(true, action))  // Assuming 'true' is appropriate here
+                if (newNode.state.ApplyOperator(true, action))
                 {
                     children.Add(newNode);
                 }
